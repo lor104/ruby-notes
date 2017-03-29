@@ -120,3 +120,36 @@ tacos = ["chicken", "pork", "beef", "veggie", "tofu"]
         tacos = ["chicken", "pork", "beef", "veggie"]
       tacos.pop(3) = ["beef", "veggie", "tofu"]
         tacos = ["chicken", "pork"]
+
+++Class: Hash++
+  A hash is a dictionary-like collection of keys and values
+  Similar to arrays, where an array uses integers as an index value, hashes allow you to use an object type
+
+tacos {
+  :meat   => "chipotle chicken",
+  :salsa  => "tomato",
+  :cream  => "guacamole",
+  :shell  => "soft"}
+
+to_a
+has_key?
+has_value?
+
+- hash#to_a
+    converts hash to a nested array of [key, value] pairs
+    argument = none
+    return type = array
+      tacos.to_a = [["meat","chipotle chicken"], ["salsa", "tomato"], ["cream", "guacamole"], ["shell", "soft"]]
+
+- hash#has_key?
+    returns true is the given key is present in the hash
+    argument = key
+    returns = boolean (true or false)
+      tacos.has_key?(:meat) = true
+      tacos.has_key?(:tortilla) = false
+
+- hash#has_value?
+    returns true is the given key is present in the hash
+    argument = value
+    returns = boolean (true or false)
+      tacos.has_value?("chicken") = true        tacos.has_value?("beef") = false
