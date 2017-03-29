@@ -153,3 +153,23 @@ has_value?
     argument = value
     returns = boolean (true or false)
       tacos.has_value?("chicken") = true        tacos.has_value?("beef") = false
+
+++Class: File++
+  a file is an abstraction of any file object accesible by the program
+
+exist?
+extname
+
+tacos.rb
+
+- File#exist?
+    returns true if the filename exists
+    argument = file_name
+    returns = booleans (true or false)
+      File.exist?("tacos.rb") = true
+
+- File#extname
+    returns the extension of a File
+    argument = path of File
+    returns = string
+      File.extname("tacos.rb") = ".rb"
