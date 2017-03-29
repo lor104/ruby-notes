@@ -125,7 +125,7 @@ tacos = ["chicken", "pork", "beef", "veggie", "tofu"]
   A hash is a dictionary-like collection of keys and values
   Similar to arrays, where an array uses integers as an index value, hashes allow you to use an object type
 
-tacos {
+tacos = {
   :meat   => "chipotle chicken",
   :salsa  => "tomato",
   :cream  => "guacamole",
