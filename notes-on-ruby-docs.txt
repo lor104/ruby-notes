@@ -42,7 +42,7 @@ Reading the description of how the method works will explain all the parts of th
  “If the increment generates a “carry,” the character to the left of it is incremented.”
 
 ====ASSIGNMENT===
-Class: String
+++Class: String++
   a string is an object that holds and manipulates a sequence of characters
 
 String methods:
@@ -51,29 +51,72 @@ strip
 split
 start_with?
 
-string#length
-  gives you the number of characters in a string
-  argument = none
-  return type = number (integer)
-  string.length = #
-  "tacos".length = 5
+- string#length
+    gives you the number of characters in a string
+    argument = none
+    return type = number (integer)
+    string.length = #
+      "tacos".length = 5
 
-string#strip
-  removes the white space at the beginning or end of a string
-  argument = none
-  return type = new string
-  string.strip = new_string
-  "    tacos   ".strip = "tacos"
+- string#strip
+    removes the white space at the beginning or end of a string
+    argument = none
+    return type = new string
+    string.strip = new_string
+      "    tacos   ".strip = "tacos"
 
-string#split
-  divides a string into substrings based on a delimiter, returning an array of strings
-  argument = delimiter or nil
-  return type = array
-  "time for tacos".split = ["time", "for", "tacos"]
+- string#split
+    divides a string into substrings based on a delimiter, returning an array of strings
+    argument = delimiter or nil
+    return type = array
+      "time for tacos".split = ["time", "for", "tacos"]
 
-string#start_with?
-  returns true if the string starts with one of the arguments given
-  argument = prefix of a string
-  return type = boolean (ie true or false)
-  "tacos".start_with?("tac") = true
-  "tacos".start_with?("guac") = false
+- string#start_with?
+    returns true if the string starts with one of the arguments given
+    argument = prefix of a string
+    return type = boolean (ie true or false)
+      "tacos".start_with?("tac") = true
+      "tacos".start_with?("guac") = false
+
+
+++Class: Array++
+  An array is an ordered, integer-indexed collection of an object
+
+Array methods:
+first
+delete_at
+delete
+pop
+
+tacos = ["chicken", "pork", "beef", "veggie", "tofu"]
+
+- array#first
+    returns the first object of an array
+    argument = none, or a number
+    return type = object or nil, or an array
+      tacos.first = "chicken"
+      tacos.first(2) = ["chicken", "pork"]
+
+- array#delete_at
+    deletes the element at the specified index, returning that element or nil if the index is out of range
+    argument = index value
+    return = object, or nil
+      tacos.delete_at(1) = "pork"
+        tacos = ["chicken", "beef"]
+      tacos.delete_at(4) = nil
+
+-array#delete
+    deletes all objects that are equal to the argument passed
+    argument = object
+    return type = item, or nil
+      tacos.delete("pork") = "pork"
+        tacos = ["chicken", "beef"]
+
+- array#pop
+    removes the last element from an array and returns it, or nil if the array is empty. If an number is given, it will delete that number of elements, starting from the last one
+    argument = none, or a number
+    return = object or nil, or an array
+      tacos.pop = "tofu"
+        tacos = ["chicken", "pork", "beef", "veggie"]
+      tacos.pop(3) = ["beef", "veggie", "tofu"]
+        tacos = ["chicken", "pork"]
